@@ -15,7 +15,7 @@ export function manageFriends(state = {friends: []}, action){
             return (
                 {...state,
                     friends: [
-                        ...state.friends.slice(friendId),
+                        ...state.friends.slice(0, friendId),
                         ...state.friends.slice(friendId + 1)
                     ]}
             )
